@@ -304,7 +304,9 @@ var ChatBot = function () {
                                         media.push(ob.Icon.URL);
                                     }
 
-                                    content += '<p>' + ob.Result.replace("</a>", "</a> ") + '</p>';
+                                    const newPara = '<p>' + ob.Result.replace("</a>", "</a> ") + '</p>';
+                                    // console.log(newPara);
+                                    content += newPara;
                                 }
 
                                 ///content += '<img src="' + ob.Icon.URL + '" align="left" />' +
@@ -406,6 +408,14 @@ var ChatBot = function () {
             if (addChatEntryCallback != undefined) {
                 addChatEntryCallback.call(this, entryDiv, text, origin);
             }
+            var newEntry = document.getElementsByClassName("bot")[document.getElementsByClassName("bot").length-1];
+            if(newEntry){
+                var listLinks = newEntry.querySelectorAll("a");
+                for (var i = 0; i < listLinks.length; ++i) {
+                    listLinks[i].target = "_blank";
+                }
+            }
+
         },
         thinking: function (on) {
             var ti = $('#chatBotThinkingIndicator');
