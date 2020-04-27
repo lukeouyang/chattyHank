@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatDog Hank</title>
+    <link rel="stylesheet" type="text/css" href="css/hank.css">
+    <script src="js/domReady.js"></script>
+</head>
+<body>
+<div class="container clearfix">
+
+        <div class="dog-box">
+            <div class="greeting">
+                <p>Hello, I'm Hank.</p>
+                <p>Let's chat!</p>
+            </div>
+            <div class="dog">
+                <div class="head">
+                    <div class="forehead"></div>
+                    <div class="face"></div>
+                    <div class="chin"></div>
+                    <div class="eye">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="eye right">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="birthmark"></div>
+                    <div class="ear"></div>
+                    <div class="ear right"></div>
+                    <div class="nose">
+                        <div class="nostril"></div>
+                        <div class="nostril right"></div>
+                    </div>
+                    <div class="mouth">
+                        <div class="teen no11"></div>
+                        <div class="teen no21"></div>
+                        <div class="tongue"></div>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="arm"></div>
+                    <div class="arm right"></div>
+                    <div class="leg">
+                        <div class="foot"></div>
+                    </div>
+                    <div class="leg right">
+                        <div class="foot"></div>
+                    </div>
+                    <div class="belly"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-box hidden" style="background-color: #1e7e34">2</div>
+
+</div>
+
+<script>
+    function startProgram(){
+        const greeting = document.getElementsByClassName("greeting")[0];
+        greeting.addEventListener("click", startChat);
+    }
+    function startChat(){
+        const dogBox = document.getElementsByClassName("dog-box")[0];
+        const chatBox = document.getElementsByClassName("chat-box")[0];
+        // console.log(dogBox);
+        // console.log(chatBox);
+
+        chatBox.classList.remove("hidden");
+    }
+
+    myReady(startProgram);
+    // startChat();
+
+</script>
+</body>
+</html>
