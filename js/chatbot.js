@@ -408,7 +408,7 @@ var ChatBot = function () {
             if (addChatEntryCallback != undefined) {
                 addChatEntryCallback.call(this, entryDiv, text, origin);
             }
-            var newEntry = document.getElementsByClassName("bot")[document.getElementsByClassName("bot").length-1];
+            var newEntry = document.getElementsByClassName("bot")[0];
             if(newEntry){
                 var listLinks = newEntry.querySelectorAll("a");
                 for (var i = 0; i < listLinks.length; ++i) {
