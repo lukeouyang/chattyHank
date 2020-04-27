@@ -130,10 +130,10 @@
             dogBox.style.cssText =
                 "width:28%;transition:width 2s;-moz-transition:width 2s;-webkit-transition:width 2s;-o-transition:width 2s;";
             chatBox.style.width="70%";
-            chatBox.style.height="100vh";
+            chatBox.style.minHeight="100vh";
             chatBox.classList.remove("hidden");
         } else {
-            chatBox.style.height="100vh";
+            chatBox.style.minHeight="100vh";
             chatBox.classList.remove("hidden");
             window.scrollTo({
                     top: document.body.scrollHeight,
