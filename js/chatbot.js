@@ -1,3 +1,4 @@
+
 var ChatBot = function () {
 
     //// common vars
@@ -72,7 +73,7 @@ var ChatBot = function () {
         }
 
         var datalist = $('#chatBotCommands');
-        if (datalist.size() == 0) {
+        if (datalist.length == 0) {
             datalist = $('<datalist id="chatBotCommands">');
             $('body').append(datalist);
         } else {
@@ -128,7 +129,7 @@ var ChatBot = function () {
                 }, pauseLength);
 
                 var chclb = $('#chatBotConversationLoadingBar');
-                if (chclb.size() == 0) {
+                if (chclb.length == 0) {
                     chclb = $('<div id="chatBotConversationLoadingBar"></div>');
                     chclb.css('position','absolute');
                     $('body').append(chclb);
