@@ -25,20 +25,26 @@ body, p, div{
     min-width: 300px;
     position:relative;
     float: left;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-
+.space{
+    height:20vh;
+}
 .greeting{
     /*position: absolute;*/
     /*display: inline-block;*/
-    position: absolute;
+    /*position: absolute;*/
     /*left: 50%;*/
     /*margin-left: -7.5%;*/
-    left: 0;
-    right: 0;
-    margin: auto;
-    bottom: 50vh;
+    /*left: 0;*/
+    /*right: 0;*/
+    /*margin: auto;*/
+    /*bottom: 50vh;*/
+
     background-color: aliceblue;
     width:15%;
     min-width: 250px;
@@ -58,7 +64,7 @@ body, p, div{
 
 .dog {
     position: relative;
-    top: 68vh;
+
     /*left: -10vw; !*transform: scale(1, 1);*!*/
     transform: scale(1.5);
 }
